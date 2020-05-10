@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AuthService } from './service/security/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -13,42 +14,81 @@ export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
     {
-      title: 'Inbox',
-      url: '/folder/Inbox',
-      icon: 'mail'
+      title: 'DashBoard',
+      url: '/folder',
+      icon: 'home-outline'
     },
     {
-      title: 'Outbox',
-      url: '/folder/Outbox',
-      icon: 'paper-plane'
+      title: 'Update Demand',
+      icon: 'walk',
+      children: [
+        {
+          title: 'Forecast Demand',
+          url: '/forecast-demand',
+          icon: 'analytics-outline',
+        },
+        {
+          title: 'Manual Demand',
+          url: '/manual-demand',
+          icon: 'pulse-outline'
+        },
+        {
+          title: 'Newstaffing Sync',
+          url: '/newstaffing-sync',
+          icon: 'radio-button-on-outline'
+        },
+        {
+          title: 'Renewalstaffing Sync',
+          url: '/renewalstaffing-sync',
+          icon: 'refresh-circle-outline'
+        },
+        {
+          title: 'View Demand',
+          url: '/view-demand',
+          icon: 'aperture-outline'
+        }
+      ]
     },
     {
-      title: 'Favorites',
-      url: '/folder/Favorites',
-      icon: 'heart'
-    },
+      title: 'Fullfillment',
+      icon: 'business-outline',
+      children: [
+        {
+          title: 'Demand Fullfillment',
+          url: '/demand-fullfillment',
+          icon: 'logo-foursquare',
+        },
+        {
+          title: 'Search Employee',
+          url: '/search-employee',
+          icon: 'search-outline'
+        }
+      ]
+    }
+    ,
     {
-      title: 'Archived',
-      url: '/folder/Archived',
-      icon: 'archive'
-    },
-    {
-      title: 'Trash',
-      url: '/folder/Trash',
-      icon: 'trash'
-    },
-    {
-      title: 'Spam',
-      url: '/folder/Spam',
-      icon: 'warning'
+      title: 'Request Demand',
+      icon: 'apps-outline',
+      children: [
+        {
+          title: 'Approve Manual Demand',
+          url: '/approve-manual-demand',
+          icon: 'bandage-outline',
+        },
+        {
+          title: 'Approve External hiring',
+          url: '/approve-external-hiring',
+          icon: 'ellipsis-horizontal-circle-outline'
+        }
+      ]
     }
   ];
-  public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private auth: AuthService
   ) {
     this.initializeApp();
   }
@@ -65,5 +105,8 @@ export class AppComponent implements OnInit {
     if (path !== undefined) {
       this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
     }
+  }
+  isAuthenticated() {
+    return this.auth.getAuthenticated();
   }
 }
