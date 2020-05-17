@@ -8,6 +8,8 @@ import { NewstaffingSyncPage } from './newstaffing-sync/newstaffing-sync.page';
 import { RenewalstaffingSyncPage } from './renewalstaffing-sync/renewalstaffing-sync.page';
 import { ViewDemandPage } from './view-demand/view-demand.page';
 import { DemandPageRoutingModule } from './demand-routing.module';
+import { ForecastDetailsPage } from './forecast-demand/forecast-details/forecast-details.page';
+import { ForecastComponent } from './components/forecast/forecast.component';
 
 @NgModule({
     imports: [
@@ -16,6 +18,8 @@ import { DemandPageRoutingModule } from './demand-routing.module';
       IonicModule,
       DemandPageRoutingModule
     ],
-    declarations: [ForecastDemandPage, ManualDemandPage, NewstaffingSyncPage, RenewalstaffingSyncPage, ViewDemandPage]
+    declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent,
+        NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage,
+         ViewDemandPage]
   })
 export class DemandPageModule {}

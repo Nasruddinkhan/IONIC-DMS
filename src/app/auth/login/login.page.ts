@@ -19,7 +19,7 @@ export class LoginPage implements OnInit {
   login() {
     this.presentAlert();
     this.auth.setAuthenticated(true);
-    this.router.navigateByUrl('folder');
+    this.router.navigateByUrl('dashboard');
   }
   async presentAlert() {
     const alert = await this.alertCtrl.create({

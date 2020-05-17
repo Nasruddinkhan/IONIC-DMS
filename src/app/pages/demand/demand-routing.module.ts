@@ -5,18 +5,15 @@ import { ManualDemandPage } from './manual-demand/manual-demand.page';
 import { NewstaffingSyncPage } from './newstaffing-sync/newstaffing-sync.page';
 import { RenewalstaffingSyncPage } from './renewalstaffing-sync/renewalstaffing-sync.page';
 import { ViewDemandPage } from './view-demand/view-demand.page';
-
-
-
-
+import { ForecastDetailsPage } from './forecast-demand/forecast-details/forecast-details.page';
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'forecast-demand'
-  },
   {
     path: 'forecast-demand',
     component: ForecastDemandPage
+  },
+  {
+    path: 'forecast-demand/:demandID',
+    component: ForecastDetailsPage
   },
   {
     path: 'manual-demand',
@@ -34,6 +31,7 @@ const routes: Routes = [
     path: 'view-demand',
     component: ViewDemandPage
   }
+
 ];
 
 @NgModule({

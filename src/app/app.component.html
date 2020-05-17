@@ -27,7 +27,9 @@
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Logged User</ion-list-header>
-          <ion-note>Nasruddin khan</ion-note>
+          <ion-button (click)="logout()">
+            <ion-icon slot="icon-only" name="log-out"></ion-icon>
+          </ion-button>
         </ion-list>
         <div *ngFor="let p of appPages">
           <ion-menu-toggle *ngIf="p.url">

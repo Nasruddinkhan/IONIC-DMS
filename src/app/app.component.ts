@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   public appPages = [
     {
       title: 'DashBoard',
-      url: '/folder',
+      url: '/dashboard',
       icon: 'home-outline'
     },
     {
@@ -85,6 +85,7 @@ export class AppComponent implements OnInit {
   ];
 
   constructor(
+    private  router: Router,
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
@@ -100,13 +101,11 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
-  }
+  ngOnInit() {  }
   isAuthenticated() {
     return this.auth.getAuthenticated();
+  }
+  logout() {
+    this.router.navigate(['logout']);
   }
 }

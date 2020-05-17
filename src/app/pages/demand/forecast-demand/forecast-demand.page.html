@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,6 +7,48 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content fullscreen>
+ <!--  <form>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="floating">Deal ID</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+    </ion-list>
+    <div class="ion-padding">
+      <ion-button expand="block" type="submit" class="ion-no-margin small">Search </ion-button>
+    </div>
+  </form> -->
+  <ion-searchbar placeholder="Search Demand" (ionChange)="onSearchChange($event)"></ion-searchbar>
+  <ion-list *ngIf="pokemon.length == 0">
+    <ion-item *ngFor="let i of [1,2,3,4,5]">
+      <ion-avatar slot="start">
+       <ion-skeleton-text animated></ion-skeleton-text>
+      </ion-avatar>
+      <ion-label class="ion-text-capitalize">
+        <h2>
+          <ion-skeleton-text animated style="width: 50%"></ion-skeleton-text>
+        </h2>
+        <p>
+          <ion-skeleton-text animated style="width: 20%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+  </ion-item>
+  </ion-list>
+  <ion-list >
+  <!--   <ion-item *ngFor="let poke of pokemon" [routerLink]="poke.pokeIndex">
+        <ion-avatar slot="start">
+          <img [src]="poke.image" style="background: #f2f2f2">
+        </ion-avatar>
+        <ion-label class="ion-text-capitalize">
+          <h2>{{poke.name}}</h2>
+          <p>#{{poke.pokeIndex}}</p>
+        </ion-label>
+    </ion-item> -->
+    <app-forecast *ngFor="let poke of pokemon" [poke]="poke"></app-forecast>
+  </ion-list>
+  <ion-infinite-scroll (ionInfinite)="loadPokemon(true, $event)">
+    <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

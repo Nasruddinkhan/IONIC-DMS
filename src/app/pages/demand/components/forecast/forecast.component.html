@@ -1,0 +1,9 @@
+<ion-item   [routerLink]="['./',poke.pokeIndex]">
+  <ion-avatar slot="start">
+    <img [src]="poke.image" style="background: #f2f2f2">
+  </ion-avatar>
+  <ion-label class="ion-text-capitalize">
+    <h2>{{poke.name}}</h2>
+    <p>#{{poke.pokeIndex}}</p>
+  </ion-label>
+</ion-item>
