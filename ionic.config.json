@@ -1,5 +1,7 @@
 {
   "name": "DMS",
-  "integrations": {},
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular"
 }

@@ -24,27 +24,27 @@ export class AppComponent implements OnInit {
       children: [
         {
           title: 'Forecast Demand',
-          url: '/forecast-demand',
+          url: '/demand/forecast-demand',
           icon: 'analytics-outline',
         },
         {
           title: 'Manual Demand',
-          url: '/manual-demand',
+          url: '/demand/manual-demand',
           icon: 'pulse-outline'
         },
         {
           title: 'Newstaffing Sync',
-          url: '/newstaffing-sync',
+          url: '/demand/newstaffing-sync',
           icon: 'radio-button-on-outline'
         },
         {
           title: 'Renewalstaffing Sync',
-          url: '/renewalstaffing-sync',
+          url: '/demand/renewalstaffing-sync',
           icon: 'refresh-circle-outline'
         },
         {
           title: 'View Demand',
-          url: '/view-demand',
+          url: '/demand/view-demand',
           icon: 'aperture-outline'
         }
       ]
@@ -55,12 +55,12 @@ export class AppComponent implements OnInit {
       children: [
         {
           title: 'Demand Fullfillment',
-          url: '/demand-fullfillment',
+          url: '/fullfillment/demand-fullfillment',
           icon: 'logo-foursquare',
         },
         {
           title: 'Search Employee',
-          url: '/search-employee',
+          url: '/fullfillment/search-employee',
           icon: 'search-outline'
         }
       ]
@@ -72,12 +72,12 @@ export class AppComponent implements OnInit {
       children: [
         {
           title: 'Approve Manual Demand',
-          url: '/approve-manual-demand',
+          url: '/demandapproval/approve-manual-demand',
           icon: 'bandage-outline',
         },
         {
           title: 'Approve External hiring',
-          url: '/approve-external-hiring',
+          url: '/demandapproval/approve-external-hiring',
           icon: 'ellipsis-horizontal-circle-outline'
         }
       ]
