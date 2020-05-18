@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import {  HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, delay } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
@@ -8,9 +9,240 @@ export class ResourceforcastingService {
   baseUrl = 'https://pokeapi.co/api/v2';
   imageUrl = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/';
   constructor(private http: HttpClient) { }
+  deals = [
+    {
+    key : 954451,
+    value : '954451 Fedex'
+    },
+    {
+      key : 954452,
+      value : '954452 Health Care'
+    }
+    ,
+    {
+      key : 954455,
+      value : '954455 Health Care'
+    }
+    ,
+    {
+      key : 954453,
+      value : '954453 Health Care'
+    }
+    ,
+    {
+      key : 954451,
+      value : '954451 Fedex'
+      },
+      {
+        key : 954452,
+        value : '954452 Health Care'
+      }
+      ,
+      {
+        key : 954455,
+        value : '954455 Health Care'
+      }
+      ,
+      {
+        key : 954453,
+        value : '954453 Health Care'
+      }
+      ,
+      {
+        key : 954451,
+        value : '954451 Fedex'
+        },
+        {
+          key : 954452,
+          value : '954452 Health Care'
+        }
+        ,
+        {
+          key : 954455,
+          value : '954455 Health Care'
+        }
+        ,
+        {
+          key : 954453,
+          value : '954453 Health Care'
+        },
+        {
+          key : 954451,
+          value : '954451 Fedex'
+          },
+          {
+            key : 954452,
+            value : '954452 Health Care'
+          }
+          ,
+          {
+            key : 954455,
+            value : '954455 Health Care'
+          }
+          ,
+          {
+            key : 954453,
+            value : '954453 Health Care'
+          }
+          ,
+          {
+            key : 954451,
+            value : '954451 Fedex'
+            },
+            {
+              key : 954452,
+              value : '954452 Health Care'
+            }
+            ,
+            {
+              key : 954455,
+              value : '954455 Health Care'
+            }
+            ,
+            {
+              key : 954453,
+              value : '954453 Health Care'
+            }
+            ,
+            {
+              key : 954451,
+              value : '954451 Fedex'
+              },
+              {
+                key : 954452,
+                value : '954452 Health Care'
+              }
+              ,
+              {
+                key : 954455,
+                value : '954455 Health Care'
+              }
+              ,
+              {
+                key : 954453,
+                value : '954453 Health Care'
+              }
+              ,
+              {
+                key : 954451,
+                value : '954451 Fedex'
+                },
+                {
+                  key : 954452,
+                  value : '954452 Health Care'
+                }
+                ,
+                {
+                  key : 954455,
+                  value : '954455 Health Care'
+                }
+                ,
+                {
+                  key : 954453,
+                  value : '954453 Health Care'
+                }
+                ,
+                {
+                  key : 954451,
+                  value : '954451 Fedex'
+                  },
+                  {
+                    key : 954452,
+                    value : '954452 Health Care'
+                  }
+                  ,
+                  {
+                    key : 954455,
+                    value : '954455 Health Care'
+                  }
+                  ,
+                  {
+                    key : 954453,
+                    value : '954453 Health Care'
+                  }
+                  ,
+                  {
+                    key : 954451,
+                    value : '954451 Fedex'
+                    },
+                    {
+                      key : 954452,
+                      value : '954452 Health Care'
+                    }
+                    ,
+                    {
+                      key : 954455,
+                      value : '954455 Health Care'
+                    }
+                    ,
+                    {
+                      key : 954453,
+                      value : '954453 Health Care'
+                    },
+                    {
+                      key : 954451,
+                      value : '954451 Fedex'
+                      },
+                      {
+                        key : 954452,
+                        value : '954452 Health Care'
+                      }
+                      ,
+                      {
+                        key : 954455,
+                        value : '954455 Health Care'
+                      }
+                      ,
+                      {
+                        key : 954453,
+                        value : '954453 Health Care'
+                      }
+                      ,
+                      {
+                        key : 954451,
+                        value : '954451 Fedex'
+                        },
+                        {
+                          key : 954452,
+                          value : '954452 Health Care'
+                        }
+                        ,
+                        {
+                          key : 954455,
+                          value : '954455 Health Care'
+                        }
+                        ,
+                        {
+                          key : 954453,
+                          value : '954453 Health Care'
+                        }
+                        ,
+                        {
+                          key : 954451,
+                          value : '954451 Fedex'
+                          },
+                          {
+                            key : 954452,
+                            value : '954452 Health Care'
+                          }
+                          ,
+                          {
+                            key : 954455,
+                            value : '954455 Health Care'
+                          }
+                          ,
+                          {
+                            key : 954453,
+                            value : '954453 Health Care'
+                          },
+                          {
+                          key : 954454,
+                          value : '954454 LAST Health Care'
+                        }
+  ];
   limit = 25;
   getPokemon(offset = 0) {
-    return this.http.get(`${this.baseUrl}/pokemon?offset=${offset}&limit=25`).pipe(
+    return this.http.get(`${this.baseUrl}/pokemon?offset=${offset}&limit=10`).pipe(
       map(result => {
         return result[`results`];
       }),
@@ -47,5 +279,14 @@ export class ResourceforcastingService {
         return poke;
       })
     );
+  }
+  getDeals(page: number = 1, size: number = 15): any[] {
+    return this.deals.slice((page - 1) * size, ((page - 1) * size) + size);
+  }
+  getDealsAsync(page: number = 1, size: number = 15): Observable<any[]> {
+    return new Observable<any[]>(observer => {
+      observer.next(this.getDeals(page, size));
+      observer.complete();
+    }).pipe(delay(2000));
   }
 }

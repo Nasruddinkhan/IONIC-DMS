@@ -10,13 +10,14 @@ import { ViewDemandPage } from './view-demand/view-demand.page';
 import { DemandPageRoutingModule } from './demand-routing.module';
 import { ForecastDetailsPage } from './forecast-demand/forecast-details/forecast-details.page';
 import { ForecastComponent } from './components/forecast/forecast.component';
-
+import { IonicSelectableModule } from 'ionic-selectable';
 @NgModule({
     imports: [
       CommonModule,
       FormsModule,
       IonicModule,
-      DemandPageRoutingModule
+      DemandPageRoutingModule,
+      IonicSelectableModule
     ],
     declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent,
         NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage,

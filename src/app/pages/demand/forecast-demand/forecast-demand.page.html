@@ -8,17 +8,27 @@
 </ion-header>
 
 <ion-content fullscreen>
- <!--  <form>
-    <ion-list lines="full" class="ion-no-margin ion-no-padding">
-      <ion-item>
-        <ion-label position="floating">Deal ID</ion-label>
-        <ion-input></ion-input>
-      </ion-item>
-    </ion-list>
-    <div class="ion-padding">
-      <ion-button expand="block" type="submit" class="ion-no-margin small">Search </ion-button>
-    </div>
-  </form> -->
+  <ion-item>
+    <ion-label>Select Deal ID</ion-label>
+    <ionic-selectable [(ngModel)]="crmID" [items]="deals"
+      itemValueField="key"
+      itemTextField="value"
+      headerColor="primary"
+      [canSearch]="true"
+      [hasInfiniteScroll]="true"
+      [canSearch]="true"
+      (onInfiniteScroll)="getDeals($event)"
+      (onChange)="dealChange($event)"
+      searchFailText="Nothing found :(">
+    </ionic-selectable>
+  </ion-item>
+ <!--  <ion-item>
+    <ion-label>Music</ion-label>
+    <ion-select>
+      <ion-select-option *ngFor="let poke of pokemon" [value]="poke.name">{{poke.name}}</ion-select-option>
+    </ion-select>
+  </ion-item> -->
+  
   <ion-searchbar placeholder="Search Demand" (ionChange)="onSearchChange($event)"></ion-searchbar>
   <ion-list *ngIf="pokemon.length == 0">
     <ion-item *ngFor="let i of [1,2,3,4,5]">
@@ -48,7 +58,7 @@
     <app-forecast *ngFor="let poke of pokemon" [poke]="poke"></app-forecast>
   </ion-list>
   <ion-infinite-scroll (ionInfinite)="loadPokemon(true, $event)">
-    <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="Loading more data...">
+    <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="loading more demands...">
     </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>
