@@ -10,15 +10,18 @@
 <ion-content fullscreen>
   <ion-item>
     <ion-label>Select Deal ID</ion-label>
-    <ionic-selectable [(ngModel)]="crmID" [items]="deals"
-      itemValueField="key"
-      itemTextField="value"
+    <ionic-selectable  item-content [(ngModel)]="crmID" [items]="pokemon"
+      itemValueField="pokeIndex"
+      itemTextField="name"
       headerColor="primary"
+      [isMultiple]="true"
       [canSearch]="true"
       [hasInfiniteScroll]="true"
-      [canSearch]="true"
-      (onInfiniteScroll)="getDeals($event)"
-      (onChange)="dealChange($event)"
+      (onInfiniteScroll)="loadDeals($event)"
+      (onSearch)="onDealSearch($event)"
+      [canClear]="true"
+      [shouldStoreItemValue]="false"
+      closeButtonSlot="end"
       searchFailText="Nothing found :(">
     </ionic-selectable>
   </ion-item>

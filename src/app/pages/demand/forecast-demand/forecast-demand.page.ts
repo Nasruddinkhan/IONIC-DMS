@@ -15,21 +15,42 @@ export class ForecastDemandPage implements OnInit {
   pokemon = [];
   crmID: string;
   deals = [];
-  deels10Page = 2;
+  deels10Page = 1;
   ngOnInit() {
     this.loadPokemon();
-    this.getOnDeals();
+  //  this.loadDeals();
   }
-  getOnDeals() {
-    this.deals = this.forecastService.getDeals();
+  loadDeals(event: {component: IonicSelectableComponent, text: string}) {
+    console.log(this.deels10Page);
+    if (this.deels10Page > 80) {
+      this.offset = 0;
+      event.component.disableInfiniteScroll();
+      return;
+    } else {
+      this.offset += 10;
+    }
+    console.log(this.offset);
+    this.forecastService.getPokemon(this.offset).subscribe(res => {
+      console.log('result: ', res);
+      this.pokemon = [...this.pokemon, ...res];
+      console.log(event);
+      if (event) {
+        this.infinite.complete();
+      }
+      event.component.endInfiniteScroll();
+      this.deels10Page++;
+    });
   }
   loadPokemon(loadMore = false, event?) {
+    console.log(loadMore);
+    console.log( this.offset );
     if (loadMore) {
       this.offset += 10;
     }
     this.forecastService.getPokemon(this.offset).subscribe(res => {
       console.log('result: ', res);
       this.pokemon = [...this.pokemon, ...res];
+      console.log(event);
       if (event) {
         event.target.complete();
       }
@@ -50,20 +71,23 @@ export class ForecastDemandPage implements OnInit {
       this.pokemon = [];
     });
   }
-
-  getDeals(event: { component: IonicSelectableComponent, infiniteScroll: IonInfiniteScroll }) {
-    // Trere're no more ports - disable infinite scroll.
-    if (this.deels10Page > 10) {
-      event.infiniteScroll.disabled  = true;
+  onDealSearch(event: {
+    component: IonicSelectableComponent,
+    text: string
+  }) {
+    console.log(event.text);
+    if ( event.text === '') {
+      this.deels10Page = 1;
+      this.offset = 0;
+      event.component.enableInfiniteScroll();
+      this.loadDeals(event);
       return;
     }
-    console.log( this.deels10Page);
-    this.forecastService.getDealsAsync(this.deels10Page).subscribe(ports => {
-      event.component.items = event.component.items.concat(ports);
-      this.deels10Page++;
+    this.forecastService.findPokemon(event.text).subscribe(res => {
+      this.pokemon = [res];
+    }, err => {
+      this.pokemon = [];
     });
   }
-  dealChange(event: { component: IonicSelectableComponent, value: any }) {
-    console.log('deal:', event.value);
-  }
+
 }
