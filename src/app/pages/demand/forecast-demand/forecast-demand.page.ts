@@ -20,27 +20,7 @@ export class ForecastDemandPage implements OnInit {
     this.loadPokemon();
   //  this.loadDeals();
   }
-  loadDeals(event: {component: IonicSelectableComponent, text: string}) {
-    console.log(this.deels10Page);
-    if (this.deels10Page > 80) {
-      this.offset = 0;
-      event.component.disableInfiniteScroll();
-      return;
-    } else {
-      this.offset += 10;
-    }
-    console.log(this.offset);
-    this.forecastService.getPokemon(this.offset).subscribe(res => {
-      console.log('result: ', res);
-      this.pokemon = [...this.pokemon, ...res];
-      console.log(event);
-      if (event) {
-        this.infinite.complete();
-      }
-      event.component.endInfiniteScroll();
-      this.deels10Page++;
-    });
-  }
+
   loadPokemon(loadMore = false, event?) {
     console.log(loadMore);
     console.log( this.offset );
@@ -71,23 +51,4 @@ export class ForecastDemandPage implements OnInit {
       this.pokemon = [];
     });
   }
-  onDealSearch(event: {
-    component: IonicSelectableComponent,
-    text: string
-  }) {
-    console.log(event.text);
-    if ( event.text === '') {
-      this.deels10Page = 1;
-      this.offset = 0;
-      event.component.enableInfiniteScroll();
-      this.loadDeals(event);
-      return;
-    }
-    this.forecastService.findPokemon(event.text).subscribe(res => {
-      this.pokemon = [res];
-    }, err => {
-      this.pokemon = [];
-    });
-  }
-
 }

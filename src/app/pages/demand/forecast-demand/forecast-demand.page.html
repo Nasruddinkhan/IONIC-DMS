@@ -4,34 +4,16 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>forecast-demand</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button>
+        <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
-  <ion-item>
-    <ion-label>Select Deal ID</ion-label>
-    <ionic-selectable  item-content [(ngModel)]="crmID" [items]="pokemon"
-      itemValueField="pokeIndex"
-      itemTextField="name"
-      headerColor="primary"
-      [isMultiple]="true"
-      [canSearch]="true"
-      [hasInfiniteScroll]="true"
-      (onInfiniteScroll)="loadDeals($event)"
-      (onSearch)="onDealSearch($event)"
-      [canClear]="true"
-      [shouldStoreItemValue]="false"
-      closeButtonSlot="end"
-      searchFailText="Nothing found :(">
-    </ionic-selectable>
-  </ion-item>
- <!--  <ion-item>
-    <ion-label>Music</ion-label>
-    <ion-select>
-      <ion-select-option *ngFor="let poke of pokemon" [value]="poke.name">{{poke.name}}</ion-select-option>
-    </ion-select>
-  </ion-item> -->
-  
+  <app-deal [isMulticheck]="false"></app-deal>
   <ion-searchbar placeholder="Search Demand" (ionChange)="onSearchChange($event)"></ion-searchbar>
   <ion-list *ngIf="pokemon.length == 0">
     <ion-item *ngFor="let i of [1,2,3,4,5]">
@@ -49,15 +31,6 @@
   </ion-item>
   </ion-list>
   <ion-list >
-  <!--   <ion-item *ngFor="let poke of pokemon" [routerLink]="poke.pokeIndex">
-        <ion-avatar slot="start">
-          <img [src]="poke.image" style="background: #f2f2f2">
-        </ion-avatar>
-        <ion-label class="ion-text-capitalize">
-          <h2>{{poke.name}}</h2>
-          <p>#{{poke.pokeIndex}}</p>
-        </ion-label>
-    </ion-item> -->
     <app-forecast *ngFor="let poke of pokemon" [poke]="poke"></app-forecast>
   </ion-list>
   <ion-infinite-scroll (ionInfinite)="loadPokemon(true, $event)">
