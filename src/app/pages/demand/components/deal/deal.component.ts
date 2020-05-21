@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ResourceforcastingService } from 'src/app/service/forecasting/resourceforcasting.service';
 import { IonicSelectableComponent } from 'ionic-selectable';
 
@@ -10,18 +10,24 @@ import { IonicSelectableComponent } from 'ionic-selectable';
 export class DealComponent implements OnInit {
   offset = 0;  pokemon = []; deels10Page = 1; crmID: string;
   @Input() isMulticheck: boolean;
+
+  @Output()
+  enableButton: EventEmitter<boolean> = new EventEmitter();
+
+
+
   constructor(private forecastService: ResourceforcastingService) { }
 
   ngOnInit() {}
   loadDeals(event: {component: IonicSelectableComponent, text: string}) {
-    console.log(this.deels10Page);
+
     if (this.deels10Page > 80) {
       this.offset = 0;
       event.component.disableInfiniteScroll();
       return;
-    } else {
-      this.offset += 10;
     }
+    this.offset = this.deels10Page !== 0 ? this.offset += 10 : 0;
+    console.log(this.deels10Page);
     console.log(this.offset);
     this.forecastService.getPokemon(this.offset).subscribe(res => {
       console.log('result: ', res);
@@ -37,7 +43,8 @@ export class DealComponent implements OnInit {
   }) {
     console.log(event.text);
     if ( event.text === '') {
-      this.deels10Page = 1;
+      this.pokemon = [];
+      this.deels10Page = 0;
       this.offset = 0;
       event.component.enableInfiniteScroll();
       this.loadDeals(event);
@@ -48,5 +55,8 @@ export class DealComponent implements OnInit {
     }, err => {
       this.pokemon = [];
     });
+  }
+  onDealChange(e) {
+    this.enableButton.emit(e);
   }
 }

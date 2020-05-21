@@ -6,6 +6,7 @@ import { NewstaffingSyncPage } from './newstaffing-sync/newstaffing-sync.page';
 import { RenewalstaffingSyncPage } from './renewalstaffing-sync/renewalstaffing-sync.page';
 import { ViewDemandPage } from './view-demand/view-demand.page';
 import { ForecastDetailsPage } from './forecast-demand/forecast-details/forecast-details.page';
+import { CreateForecastDemandPage } from './forecast-demand/create-forecast-demand/create-forecast-demand.page';
 const routes: Routes = [
   {
     path: 'forecast-demand',
@@ -30,7 +31,12 @@ const routes: Routes = [
   {
     path: 'view-demand',
     component: ViewDemandPage
+  },
+  {
+    path: 'create-forecast-demand/:dealID',
+    component: CreateForecastDemandPage
   }
+
 
 ];
 

@@ -1,0 +1,13 @@
+
+
+<ion-toolbar color="primary">
+  <ion-buttons slot="start">
+    <ion-menu-button></ion-menu-button>
+  </ion-buttons>
+  <ion-title>{{titles.name}}</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button (click)="presentAlert()" [disabled]="!titles.isDisable">
+      <ion-icon name="add-circle-outline" slot="icon-only"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>

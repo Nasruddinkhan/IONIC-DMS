@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ForecastDemandPage } from './forecast-demand/forecast-demand.page';
@@ -12,17 +12,20 @@ import { ForecastDetailsPage } from './forecast-demand/forecast-details/forecast
 import { ForecastComponent } from './components/forecast/forecast.component';
 import { IonicSelectableModule } from 'ionic-selectable';
 import { DealComponent } from './components/deal/deal.component';
+import { AddButtonComponent } from './components/add-button/add-button.component';
+import { CreateForecastDemandPage } from './forecast-demand/create-forecast-demand/create-forecast-demand.page';
 @NgModule({
     imports: [
       CommonModule,
       FormsModule,
       IonicModule,
       DemandPageRoutingModule,
-      IonicSelectableModule
+      IonicSelectableModule,
+      ReactiveFormsModule
     ],
-    declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent,
-        NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent,
-         ViewDemandPage],
+    declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent, CreateForecastDemandPage,
+         NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent,
+         AddButtonComponent, ViewDemandPage],
          schemas: [
           CUSTOM_ELEMENTS_SCHEMA
       ],

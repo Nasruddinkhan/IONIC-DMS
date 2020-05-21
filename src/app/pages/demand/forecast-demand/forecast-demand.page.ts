@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ResourceforcastingService } from 'src/app/service/forecasting/resourceforcasting.service';
 import { IonInfiniteScroll } from '@ionic/angular';
-import { IonicSelectableComponent } from 'ionic-selectable';
+import { HeaderTitle } from '../model/header.title.model';
 
 @Component({
   selector: 'app-forecast-demand',
@@ -16,8 +16,11 @@ export class ForecastDemandPage implements OnInit {
   crmID: string;
   deals = [];
   deels10Page = 1;
+  forecastheader: HeaderTitle;
   ngOnInit() {
+    this.forecastheader = new HeaderTitle(`Forecasting`, `You want to create forecast demand`, false);
     this.loadPokemon();
+
   //  this.loadDeals();
   }
 
@@ -50,5 +53,14 @@ export class ForecastDemandPage implements OnInit {
     }, err => {
       this.pokemon = [];
     });
+  }
+  enableAddButton(e) {
+    const isDisable = e.value !== null ? true : false;
+    this.forecastheader.isDisable = isDisable;
+    if ( e.value !== null) {
+    const dealID = e.value.pokeIndex;
+    this.forecastheader.msg = `You want to create forecast demand with deal ${dealID}`;
+    this.forecastheader.isRouteURL = `/demand/create-forecast-demand/${dealID}`;
+    }
   }
 }
