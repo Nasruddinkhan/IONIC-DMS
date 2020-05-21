@@ -23,6 +23,7 @@ export class CreateForecastDemandPage implements OnInit {
       console.log(dealID);
      });
     this.ionicForm = this.formBuilder.group({
+      locationType: ['', [ Validators.required]],
       name: ['', [ Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.pattern('[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$')]],
       dob: [this.defaultDate],

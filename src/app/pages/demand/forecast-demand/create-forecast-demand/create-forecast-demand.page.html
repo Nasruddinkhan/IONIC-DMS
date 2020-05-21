@@ -7,15 +7,18 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
- 
+  <ion-card id="login-card">
   <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
-    <ion-item >
+    <ion-item lines="full">
       <ion-label  position="floating">Location Type</ion-label>
-      <ion-select formControlName="name" required>
-        <ion-option value="f">Onsite</ion-option>
-        <ion-option value="m">Offshore</ion-option>
+      <ion-select formControlName="locationType">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
       </ion-select>
     </ion-item>
+    <span class="error ion-padding" *ngIf="isSubmitted && errorControl.locationType.errors?.required">
+      location type is required.
+    </span>
     <ion-item lines="full">
       <ion-label position="floating">Name</ion-label>
       <ion-input formControlName="name" type="text"></ion-input>
@@ -60,4 +63,7 @@
       </ion-col>
     </ion-row>
   </form>
+  
+  </ion-card>
+  
 </ion-content>
