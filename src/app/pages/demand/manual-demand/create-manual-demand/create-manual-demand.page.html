@@ -1,13 +1,4 @@
-<ion-header>
-  <ion-toolbar  color="primary">
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/forecast-demand"></ion-back-button>
-    </ion-buttons>
-    <ion-title class="ion-text-capitalize">Create ForeCast Demand</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content padding class="form-content">
-       
+
   <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
     <ion-item lines="full">
       <ion-label  position="floating" color="primary">Location Type</ion-label>
@@ -80,4 +71,4 @@
       </ion-col>
     </ion-row>
   </form>
-</ion-content>
+

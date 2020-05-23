@@ -36,8 +36,6 @@ const routes: Routes = [
     path: 'create-forecast-demand/:dealID',
     component: CreateForecastDemandPage
   }
-
-
 ];
 
 @NgModule({

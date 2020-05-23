@@ -106,6 +106,7 @@ export class AppComponent implements OnInit {
     return this.auth.getAuthenticated();
   }
   logout() {
-    this.router.navigate(['logout']);
+    //this.router.navigate(['logout']);
+    window.location.href = `logout`;
   }
 }

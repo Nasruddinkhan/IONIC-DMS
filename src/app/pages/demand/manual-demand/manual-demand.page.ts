@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manual-demand.page.scss'],
 })
 export class ManualDemandPage implements OnInit {
-
-  constructor() { }
+  selectedSegment: string ;
+  constructor() {
+    this.selectedSegment = 'Manual Demand';
+   }
 
   ngOnInit() {
   }
-
+  segmentChosen(selectedSegment: string) {
+    console.log(selectedSegment);
+    this.selectedSegment = selectedSegment;
+  }
 }

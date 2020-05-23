@@ -14,6 +14,8 @@ import { IonicSelectableModule } from 'ionic-selectable';
 import { DealComponent } from './components/deal/deal.component';
 import { AddButtonComponent } from './components/add-button/add-button.component';
 import { CreateForecastDemandPage } from './forecast-demand/create-forecast-demand/create-forecast-demand.page';
+import { ManualRequestPage } from './manual-demand/manual-request/manual-request.page';
+import { CreateManualDemandPage } from './manual-demand/create-manual-demand/create-manual-demand.page';
 @NgModule({
     imports: [
       CommonModule,
@@ -23,8 +25,8 @@ import { CreateForecastDemandPage } from './forecast-demand/create-forecast-dema
       IonicSelectableModule,
       ReactiveFormsModule
     ],
-    declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent, CreateForecastDemandPage,
-         NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent,
+    declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent, CreateForecastDemandPage, CreateManualDemandPage,
+         NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage,
          AddButtonComponent, ViewDemandPage],
          schemas: [
           CUSTOM_ELEMENTS_SCHEMA
