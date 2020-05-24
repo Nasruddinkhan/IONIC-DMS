@@ -11,12 +11,8 @@
     <ion-segment [value]="selectedSegment">
       <ion-segment-button  (click)="segmentChosen('Manual Demand')" value="Manual Demand">Manual Demand</ion-segment-button>
       <ion-segment-button (click)="segmentChosen('Manual Request')" value="Manual Request">Manual Request</ion-segment-button> 
-      <!-- <ion-segment-button *ngFor="let name of ['Manual Demand', 'Manual Request']"
-      (click)="segmentChosen(name)">
-      <ion-label>{{selectedSegment}}</ion-label> -->
-
     </ion-segment>
-    <app-create-manual-demand *ngIf="selectedSegment === 'Manual Demand'"></app-create-manual-demand>
-    <app-manual-request  *ngIf="selectedSegment === 'Manual Request'"></app-manual-request>
   </ion-toolbar>
+  <app-create-manual-demand *ngIf="selectedSegment === 'Manual Demand'"></app-create-manual-demand>
+  <app-manual-request  *ngIf="selectedSegment === 'Manual Request'"></app-manual-request>
 </ion-content>

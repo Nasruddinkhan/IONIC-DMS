@@ -16,8 +16,7 @@ import { MaterialModule } from '../../material.module';
     IonicModule,
     LoginPageRoutingModule,
     ReactiveFormsModule,
-    MaterialModule,
-    BrowserAnimationsModul
+    MaterialModule
   ],
   declarations: [LoginPage]
 })

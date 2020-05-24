@@ -1,0 +1,29 @@
+<ion-header>
+<ion-toolbar  color="primary">
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/manual-demand"></ion-back-button>
+  </ion-buttons>
+  <ion-title class="ion-text-capitalize">Manaual Request Details</ion-title>
+</ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid>
+      <ion-row>
+        <ion-col   class="ion-no-padding">
+          <ion-img [src]="loadedRequest.imageUrl"></ion-img>
+       </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <h1>{{ loadedRequest.firstName}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+       <ion-col>
+         <ion-item *ngFor="let mt of loadedRequest.eatMeal">
+          {{ mt }}
+         </ion-item>
+       </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

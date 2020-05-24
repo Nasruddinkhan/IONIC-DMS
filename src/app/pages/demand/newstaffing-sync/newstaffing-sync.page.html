@@ -6,7 +6,15 @@
     <ion-title>newstaffing-sync</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
+<ion-content fullscreen="true">
+  <app-deal [isMulticheck]="false" ></app-deal>
+  <ion-toolbar>
+    <ion-segment [value]="selectedSegment">
+      <ion-segment-button  (click)="segmentChosen('Forecasted Demand Summary')" value="Forecasted Demand Summary"> Demand Summary</ion-segment-button>
+      <ion-segment-button (click)="segmentChosen('New Staffing Sync')" value="Manual Request">New Staffing Sync
+      </ion-segment-button> 
+    </ion-segment>
+  </ion-toolbar>
+  <app-forecast-demand-summmary *ngIf="selectedSegment === 'Forecasted Demand Summary'"></app-forecast-demand-summmary>
+  <app-rightprice-staffing-sync  *ngIf="selectedSegment === 'New Staffing Sync'"></app-rightprice-staffing-sync>
 </ion-content>

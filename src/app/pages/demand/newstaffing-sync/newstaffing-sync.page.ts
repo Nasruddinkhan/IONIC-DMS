@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewstaffingSyncPage implements OnInit {
 
-  constructor() { }
+  selectedSegment: string ;
+  constructor() {
+    this.selectedSegment = 'Forecasted Demand Summary';
+   }
 
   ngOnInit() {
+  }
+  segmentChosen(selectedSegment: string) {
+    console.log(selectedSegment);
+    this.selectedSegment = selectedSegment;
   }
 
 }

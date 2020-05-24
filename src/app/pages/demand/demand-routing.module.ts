@@ -7,6 +7,8 @@ import { RenewalstaffingSyncPage } from './renewalstaffing-sync/renewalstaffing-
 import { ViewDemandPage } from './view-demand/view-demand.page';
 import { ForecastDetailsPage } from './forecast-demand/forecast-details/forecast-details.page';
 import { CreateForecastDemandPage } from './forecast-demand/create-forecast-demand/create-forecast-demand.page';
+import { ManualRequestComponent } from './components/manual-request/manual-request.component';
+import { StaffingSycComponent } from './components/staffing-syc/staffing-syc.component';
 const routes: Routes = [
   {
     path: 'forecast-demand',
@@ -21,8 +23,16 @@ const routes: Routes = [
     component: ManualDemandPage
   },
   {
+    path: 'manual-demand/:requestID',
+    component: ManualRequestComponent
+  },
+  {
     path: 'newstaffing-sync',
     component: NewstaffingSyncPage
+  },
+  {
+    path: 'newstaffing-sync/:demandID',
+    component: StaffingSycComponent
   },
   {
     path: 'renewalstaffing-sync',

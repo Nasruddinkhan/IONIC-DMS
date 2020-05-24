@@ -1,0 +1,11 @@
+
+<ion-list>
+  <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
+ <!--  <ion-item *ngFor="let emp of employees" [routerLink]="['./',emp.empID]">
+    <ion-avatar slot="start">
+      <ion-img [src]="emp.imageUrl"></ion-img>
+    </ion-avatar>
+    <ion-label>{{emp.firstName}}</ion-label>
+  </ion-item> -->
+  <app-staffing-sysnc-details *ngFor="let emp of employees" [staffingcastList]="emp"></app-staffing-sysnc-details>
+</ion-list>

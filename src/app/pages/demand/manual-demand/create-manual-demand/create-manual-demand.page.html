@@ -1,36 +1,16 @@
 
   <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
     <ion-item lines="full">
-      <ion-label  position="floating" color="primary">Location Type</ion-label>
+      <ion-label  position="floating" color="primary">Manual Reason
+      </ion-label>
       <ion-select formControlName="locationType">
         <ion-select-option value="1">Offshore</ion-select-option>
         <ion-select-option value="2">Onsite</ion-select-option>
       </ion-select>
     </ion-item>
     <div class="error" *ngIf="isSubmitted && errorControl.locationType.errors?.required">
-      <ion-icon name="information-circle-outline"></ion-icon>  location type is required.
+      <ion-icon name="information-circle-outline"></ion-icon>  Manual Reason is required.
     </div>
-    <ion-item lines="full">
-      <ion-label  position="floating" color="primary">Select LOB </ion-label>
-      <ion-select formControlName="lob">
-        <ion-select-option value="1">Offshore</ion-select-option>
-        <ion-select-option value="2">Onsite</ion-select-option>
-      </ion-select>
-    </ion-item>
-    
-    <div class="error" *ngIf="isSubmitted && errorControl.lob.errors?.required">
-      <ion-icon name="information-circle-outline"></ion-icon> LOB is required.
-    </div>
-    <ion-item lines="full">
-      <ion-label  position="floating" color="primary">Skill Element</ion-label>
-      <ion-select formControlName="skillelement">
-        <ion-select-option value="1">Offshore</ion-select-option>
-        <ion-select-option value="2">Onsite</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
-      <ion-icon name="information-circle-outline"></ion-icon> Skill Element is required.
-    </div >
     <ion-item lines="full">
       <ion-label  position="floating" color="primary">Band Grade 	</ion-label>
       <ion-select formControlName="bandGrade">
@@ -42,11 +22,205 @@
       <ion-icon name="information-circle-outline"></ion-icon>  band grade is required.
     </div>
     <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Select LOB </ion-label>
+      <ion-select formControlName="lob">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div class="error" *ngIf="isSubmitted && errorControl.lob.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> LOB is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Resource Type
+      </ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Resource Type
+      is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Project Id
+      </ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Project Type
+      is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label position="floating"color="primary">Customer </ion-label>
+      <ion-input formControlName="noOfresource" type="text" clearInput=true  ></ion-input>
+    </ion-item>
+    <div class="error" *ngIf="isSubmitted && errorControl.noOfresource.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Customer is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label position="floating"color="primary" [disabled]="true">Vertical [SubVertical]  </ion-label>
+      <ion-input formControlName="noOfresource" type="text" clearInput=true  ></ion-input>
+    </ion-item>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Employee ID</ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Employee ID is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Location</ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Location is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Development Unit
+      </ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Development Unit
+      is required.
+    </div>
+    <ion-item>
+    <ion-radio-group value="biff">
+      <!-- <ion-list-header> -->
+        <ion-label   color="primary">Work Location
+        </ion-label>
+     <!--  </ion-list-header> -->
+  
+      <ion-item>
+        <ion-label>Non Captive</ion-label>
+        <ion-radio slot="start" value="biff"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Captive </ion-label>
+        <ion-radio slot="start" value="griff"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Company</ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Company is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Approver Name</ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Approver Name is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Skill Element</ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Skill Element is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Skill Profeiency</ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Skill Profeiency is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label color="primary">Customer Interview</ion-label>
+    <ion-checkbox color="primary"></ion-checkbox>
+  </ion-item>
+  <ion-item lines="full">
+    <ion-label  position="floating" color="primary">Address Sequence No
+    </ion-label>
+    <ion-select formControlName="skillelement">
+      <ion-select-option value="1">Offshore</ion-select-option>
+      <ion-select-option value="2">Onsite</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+    <ion-icon name="information-circle-outline"></ion-icon> Address Sequence No
+    is required.
+  </div>
+  <ion-item lines="full">
+    <ion-label  position="floating" color="primary">Project Role
+    </ion-label>
+    <ion-select formControlName="skillelement">
+      <ion-select-option value="1">Offshore</ion-select-option>
+      <ion-select-option value="2">Onsite</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+    <ion-icon name="information-circle-outline"></ion-icon> Project Role
+     is required.
+  </div>
+  <ion-item lines="full">
+    <ion-label  position="floating" color="primary">Role Type
+    </ion-label>
+    <ion-select formControlName="skillelement">
+      <ion-select-option value="1">Offshore</ion-select-option>
+      <ion-select-option value="2">Onsite</ion-select-option>
+    </ion-select>
+  </ion-item>
+  <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+    <ion-icon name="information-circle-outline"></ion-icon> Role Type
+    is required.
+  </div>
+  <ion-item lines="full">
+    <ion-label position="floating"color="primary">Resource Quantity </ion-label>
+    <ion-input formControlName="noOfresource" type="text" clearInput=true min="1" ></ion-input>
+  </ion-item>
+  <div class="error" *ngIf="isSubmitted && errorControl.noOfresource.errors?.required">
+    <ion-icon name="information-circle-outline"></ion-icon> Resource Quantity is required.
+  </div>
+  <div class="error" *ngIf="isSubmitted && errorControl.noOfresource.errors?.pattern">
+    <ion-icon name="information-circle-outline"></ion-icon>Only numerical values allowed.
+  </div>
+    <ion-item lines="full">
       <ion-label position="floating" color="primary">Start Date</ion-label> 
       <ion-datetime  (ionChange)="getDate($event)" formControlName="startDate" min="1997" max="2050"></ion-datetime>
     </ion-item>
     <div class="error" *ngIf="isSubmitted && errorControl.startDate.errors?.required">
       <ion-icon name="information-circle-outline"></ion-icon> Start Date is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label position="floating" color="primary">Billing Start Date</ion-label> 
+      <ion-datetime  (ionChange)="getDate($event)" formControlName="startDate" min="1997" max="2050"></ion-datetime>
+    </ion-item>
+    <div class="error" *ngIf="isSubmitted && errorControl.startDate.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Billing Start Date is required.
     </div>
     <ion-item lines="full">
       <ion-label position="floating" color="primary">End Date</ion-label>
@@ -56,14 +230,32 @@
       <ion-icon name="information-circle-outline"></ion-icon> End date is required.
     </div>
     <ion-item lines="full">
-      <ion-label position="floating"color="primary">No.Of Resource </ion-label>
-      <ion-input formControlName="noOfresource" type="text" clearInput=true min="1" ></ion-input>
+      <ion-label  position="floating" color="primary">Visa Type
+      </ion-label>
+      <ion-select formControlName="skillelement">
+        <ion-select-option value="1">Offshore</ion-select-option>
+        <ion-select-option value="2">Onsite</ion-select-option>
+      </ion-select>
     </ion-item>
-    <div class="error" *ngIf="isSubmitted && errorControl.noOfresource.errors?.required">
-      <ion-icon name="information-circle-outline"></ion-icon> No.Of Resource is required.
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Visa Type
+      is required.
     </div>
-    <div class="error" *ngIf="isSubmitted && errorControl.noOfresource.errors?.pattern">
-      <ion-icon name="information-circle-outline"></ion-icon>Only numerical values allowed.
+    <ion-item lines="full">
+      <ion-label position="floating"  color="primary">Job Description</ion-label>
+      <ion-textarea formControlName="skillelement"></ion-textarea>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Visa Type
+      is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label position="floating"  color="primary">Comment Description</ion-label>
+      <ion-textarea formControlName="skillelement"></ion-textarea>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Visa Type
+      is required.
     </div>
     <ion-row>
       <ion-col>

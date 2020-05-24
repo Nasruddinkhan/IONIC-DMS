@@ -1,5 +1,10 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>manual-request</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-list>
+    <!--   <ion-item *ngFor="let emp of employees" [routerLink]="['./',emp.empID]">
+          <ion-avatar slot="start">
+            <ion-img [src]="emp.imageUrl"></ion-img>
+          </ion-avatar>
+          <ion-label>{{emp.firstName}}</ion-label>
+        </ion-item>  -->
+        <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
+        <app-manual-request-details *ngFor="let emp of employees" [forecastList]="emp"></app-manual-request-details>
+  </ion-list>

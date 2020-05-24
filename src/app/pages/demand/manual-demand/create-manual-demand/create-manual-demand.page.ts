@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Validators, FormBuilder, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-create-manual-demand',
@@ -11,7 +12,8 @@ export class CreateManualDemandPage implements OnInit {
   ionicForm: FormGroup;
   isSubmitted = false;
   constructor(private activeRoute: ActivatedRoute,
-              public formBuilder: FormBuilder) { }
+              public formBuilder: FormBuilder,
+              private alertCtrl: AlertController) { }
 
   ngOnInit() {
     this.ionicForm = this.formBuilder.group({
@@ -47,7 +49,28 @@ submitForm() {
       console.log('Please provide all the required values!');
       return false;
     } else {
-      console.log(this.ionicForm.value);
+
+      this.presentAlert();
     }
+  }
+
+  async presentAlert() {
+    const alert = await this.alertCtrl.create({
+      header: 'Forecasting',
+      subHeader: '505050',
+      message: 'Are you sure you want to create forecast demand',
+      buttons: [
+        {
+          text: 'Ok',
+          handler: () => {
+            console.log('show toastor', JSON.stringify(this.ionicForm.value));
+          }
+      },
+      {
+        text: 'Cancel',
+        role: 'cancel'
+      }]
+    });
+    await alert.present();
   }
 }

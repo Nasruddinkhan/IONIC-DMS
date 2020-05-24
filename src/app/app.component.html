@@ -21,9 +21,7 @@
 </ion-app> -->
 <ion-app>
   <ion-split-pane contentId="main-content">
-    <ion-menu contentId="main-content" type="overlay" *ngIf="isAuthenticated()"
-      swipe-gesture="true"
-      side="start">
+    <ion-menu contentId="main-content"  *ngIf="isAuthenticated()">
       <ion-content>
         <ion-list id="inbox-list">
           <ion-list-header>Logged User</ion-list-header>
@@ -61,4 +59,5 @@
      </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>
   </ion-split-pane>
+  
 </ion-app>
