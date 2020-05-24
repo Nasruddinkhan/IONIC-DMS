@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { AuthService } from 'src/app/service/security/auth.service';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +10,8 @@ import { AuthService } from 'src/app/service/security/auth.service';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-
+  myControl = new FormControl();
+  options: string[] = ['One', 'Two', 'Three'];
   constructor(private  router: Router,
               private auth: AuthService,
               private alertCtrl: AlertController) { }

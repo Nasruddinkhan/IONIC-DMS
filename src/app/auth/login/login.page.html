@@ -30,5 +30,27 @@
         </ion-row>
       </ion-list>
     </form>
+ <!--    <form class="example-form">
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="text"
+               placeholder="Pick one"
+               aria-label="Number"
+               matInput
+               [formControl]="myControl"
+               [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of options" [value]="option">
+            {{option}}
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <mat-form-field appearance="outline" class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="Placeholder">
+       <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+      </mat-form-field>
+    </form> -->
   </ion-card>
+ 
 </ion-content>
