@@ -9,6 +9,7 @@ import { ForecastDetailsPage } from './forecast-demand/forecast-details/forecast
 import { CreateForecastDemandPage } from './forecast-demand/create-forecast-demand/create-forecast-demand.page';
 import { ManualRequestComponent } from './components/manual-request/manual-request.component';
 import { StaffingSycComponent } from './components/staffing-syc/staffing-syc.component';
+import { RenewalstaffingDetailsSyncComponent } from './components/renewalstaffing-details-sync/renewalstaffing-details-sync.component';
 const routes: Routes = [
   {
     path: 'forecast-demand',
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path: 'create-forecast-demand/:dealID',
     component: CreateForecastDemandPage
+  },
+  {
+    path: 'renewalstaffing-sync/:demandID',
+    component: RenewalstaffingDetailsSyncComponent
   }
 ];
 

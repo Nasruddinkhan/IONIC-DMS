@@ -22,6 +22,9 @@ import { RightpriceStaffingSyncPage } from './newstaffing-sync/rightprice-staffi
 import { ForecastDemandSummmaryPage } from './newstaffing-sync/forecast-demand-summmary/forecast-demand-summmary.page';
 import { StaffingSycComponent } from './components/staffing-syc/staffing-syc.component';
 import { StafingSynctDetailsComponent } from './components/staffing-syc/staffing-sysnc-details.component';
+import { RenewalstaffingDetailsSyncComponent } from './components/renewalstaffing-details-sync/renewalstaffing-details-sync.component';
+import { RenewalDemandComponent } from './components/renewalstaffing-details-sync/renewal-demand-component';
+import { SearchViewDemandPage } from './view-demand/search-view-demand/search-view-demand.page';
 @NgModule({
     imports: [
       CommonModule,
@@ -34,9 +37,13 @@ import { StafingSynctDetailsComponent } from './components/staffing-syc/staffing
     declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent, CreateForecastDemandPage, CreateManualDemandPage,
          NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage, StaffingSycComponent,
          ManualRequestComponent, ManualRequestDetailsComponent, RightpriceStaffingSyncPage, ForecastDemandSummmaryPage,
-         AddButtonComponent, ViewDemandPage, StafingSynctDetailsComponent],
+         AddButtonComponent, ViewDemandPage, StafingSynctDetailsComponent, RenewalDemandComponent, RenewalstaffingDetailsSyncComponent,
+         SearchViewDemandPage],
          schemas: [
           CUSTOM_ELEMENTS_SCHEMA
       ],
+      entryComponents: [
+
+      ]
   })
 export class DemandPageModule {}

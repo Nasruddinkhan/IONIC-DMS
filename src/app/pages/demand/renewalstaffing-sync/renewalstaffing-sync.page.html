@@ -10,16 +10,6 @@
 <ion-content fullscreen="true">
   <app-deal [isMulticheck]="false" ></app-deal> <!-- [routerLink]="['./',emp.empID]" -->
   <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
-  <ion-item *ngFor="let emp of employees" >
-    <ion-avatar slot="start">
-      <ion-img [src]="emp.imageUrl"></ion-img>
-    </ion-avatar>
-    <ion-checkbox></ion-checkbox>
-    <ion-label>{{emp.firstName}}</ion-label>
-    <ion-buttons slot="end">
-      <ion-button>
-        <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon>
-      </ion-button>
-    </ion-buttons>
-  </ion-item>
+  <app-renewal-demand-sync *ngFor="let emp of employees" [renwalDemandObj]="emp"></app-renewal-demand-sync>
+   <!--    <ion-icon slot="icon-only" ios="ellipsis-vertical" md="ellipsis-vertical"></ion-icon> -->
 </ion-content>

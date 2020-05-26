@@ -10,7 +10,7 @@ import { HeaderTitle } from '../model/header.title.model';
 })
 export class ForecastDemandPage implements OnInit {
   offset = 0;
-  @ViewChild(IonInfiniteScroll,  {static: false}) infinite: IonInfiniteScroll;
+  @ViewChild(IonInfiniteScroll) infinite: IonInfiniteScroll;
   constructor(private forecastService: ResourceforcastingService) { }
   pokemon = [];
   crmID: string;
