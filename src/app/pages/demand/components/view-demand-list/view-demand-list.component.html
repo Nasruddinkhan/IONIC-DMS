@@ -1,3 +1,10 @@
-<p>
-  view-demand-list works!
-</p>
+<ion-item >
+  <ion-avatar slot="start">
+    <ion-img [src]="viewdemandsObj.imageUrl"></ion-img>
+  </ion-avatar>
+  <ion-label>{{viewdemandsObj.firstName}}</ion-label>
+  <ion-button size="small" shape="round" color="medium" (click)="notifications($event)">
+    <ion-icon  slot="end" name="ellipsis-vertical-outline" ></ion-icon>
+</ion-button>
+  <!-- <ion-button  (click)="notifications($event)"><ion-icon  slot="end" name="ellipsis-vertical-outline" ></ion-icon></ion-button>  -->
+</ion-item>

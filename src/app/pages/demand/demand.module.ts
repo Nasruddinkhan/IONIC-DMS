@@ -28,6 +28,8 @@ import { SearchViewDemandPage } from './view-demand/search-view-demand/search-vi
 import { DemandPopupComponent } from './components/demand-popup/demand-popup.component';
 import { DealPopupComponent } from './components/deal-popup/deal-popup.component';
 import { ProjectPopupComponent } from './components/project-popup/project-popup.component';
+import { ViewDemandListComponent } from './components/view-demand-list/view-demand-list.component';
+import { PopupViewMenuListComponent } from './components/view-demand-list/view-popup-menu-list ';
 @NgModule({
     imports: [
       CommonModule,
@@ -41,7 +43,8 @@ import { ProjectPopupComponent } from './components/project-popup/project-popup.
          NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage, StaffingSycComponent,
          ManualRequestComponent, ManualRequestDetailsComponent, RightpriceStaffingSyncPage, ForecastDemandSummmaryPage,
          AddButtonComponent, ViewDemandPage, StafingSynctDetailsComponent, RenewalDemandComponent, RenewalstaffingDetailsSyncComponent,
-         SearchViewDemandPage, DealPopupComponent, DemandPopupComponent, ProjectPopupComponent],
+         SearchViewDemandPage, DealPopupComponent, DemandPopupComponent,ViewDemandListComponent,
+         PopupViewMenuListComponent, ProjectPopupComponent],
          schemas: [
           CUSTOM_ELEMENTS_SCHEMA
       ],

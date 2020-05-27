@@ -15,12 +15,6 @@
 <ion-content>
   <ion-list *ngIf="dataReturned">
     <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
-       <ion-item *ngFor="let emp of employees">
-          <ion-avatar slot="start">
-            <ion-img [src]="emp.imageUrl"></ion-img>
-          </ion-avatar>
-          <ion-label>{{emp.firstName}}</ion-label>
-          <ion-icon  slot="end" name="ellipsis-vertical-outline"></ion-icon>
-        </ion-item>  
+    <app-view-demand-list  *ngFor="let emp of employees" [viewdemandsObj]="emp"></app-view-demand-list>
   </ion-list>
 </ion-content>
