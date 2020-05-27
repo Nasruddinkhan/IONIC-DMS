@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { SearchViewDemandPage } from './search-view-demand/search-view-demand.page';
+import { Employee } from '../model/manual.request.model';
+import { ManualRequestService } from '../../../service/manual-request/manual-request.service';
 
 
 @Component({
@@ -10,7 +12,9 @@ import { SearchViewDemandPage } from './search-view-demand/search-view-demand.pa
 })
 export class ViewDemandPage implements OnInit {
   dataReturned: any;
-  constructor(public modalController: ModalController) { }
+  employees: Employee[];
+  constructor(public modalController: ModalController,
+              private manaulService: ManualRequestService) { }
 
   ngOnInit() {
   }
@@ -21,9 +25,10 @@ export class ViewDemandPage implements OnInit {
     });
 
     modal.onDidDismiss().then((dataReturned) => {
-      console.log(dataReturned.data);
+
       if (dataReturned !== null) {
         this.dataReturned = dataReturned.data;
+        this.employees = this.manaulService.getAllManualRequest();
       }
     });
 

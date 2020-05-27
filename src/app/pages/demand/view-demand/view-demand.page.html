@@ -13,5 +13,14 @@
 </ion-header>
 
 <ion-content>
-  <p>{{dataReturned}}</p>
+  <ion-list *ngIf="dataReturned">
+    <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
+       <ion-item *ngFor="let emp of employees">
+          <ion-avatar slot="start">
+            <ion-img [src]="emp.imageUrl"></ion-img>
+          </ion-avatar>
+          <ion-label>{{emp.firstName}}</ion-label>
+          <ion-icon  slot="end" name="ellipsis-vertical-outline"></ion-icon>
+        </ion-item>  
+  </ion-list>
 </ion-content>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from '../../model/manual.request.model';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ManualRequestService } from 'src/app/service/manual-request/manual-request.service';
+import { ManualRequestService } from '../../../../service/manual-request/manual-request.service';
 
 @Component({
   selector: 'app-renewalstaffing-details-sync',
@@ -10,18 +10,19 @@ import { ManualRequestService } from 'src/app/service/manual-request/manual-requ
 })
 export class RenewalstaffingDetailsSyncComponent implements OnInit {
 
-  loadedRequest: Employee;
+  renewalRequest: Employee;
   constructor(private activeRoute: ActivatedRoute,
               private empService: ManualRequestService,
               private router: Router) { }
 
   ngOnInit() {
     this.activeRoute.paramMap.subscribe(paramMap => {
-     if (!paramMap.has('requestID')) {
+     if (!paramMap.has('demandID')) {
        return;
      }
-     const requestID = paramMap.get('requestID');
-     this.loadedRequest = this.empService.getManualRequest(requestID);
+     const requestID = paramMap.get('demandID');
+     this.renewalRequest = this.empService.getManualRequest(requestID);
+     console.log(this.renewalRequest);
     });
   }
 }

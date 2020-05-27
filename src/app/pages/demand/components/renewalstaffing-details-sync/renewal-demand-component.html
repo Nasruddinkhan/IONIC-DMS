@@ -1,4 +1,4 @@
-<ion-item   [routerLink]="['./',renwalDemandObj.empID]">
+<ion-item>
     <ion-checkbox  slot="start"></ion-checkbox>
     <ion-avatar>
       <img [src]="renwalDemandObj.imageUrl" style="background: #f2f2f2">
@@ -9,7 +9,6 @@
     </ion-label>
     <ion-buttons slot="end">
         <ion-button>
-         
           <ion-router-link color="primary" [routerLink]="['./',renwalDemandObj.empID]"> <ion-icon name="arrow-forward-outline" ></ion-icon></ion-router-link>
         </ion-button>
       </ion-buttons> 

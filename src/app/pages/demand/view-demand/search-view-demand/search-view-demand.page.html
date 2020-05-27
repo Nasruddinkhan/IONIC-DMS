@@ -8,12 +8,64 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <ion-grid>
+<ion-content padding class="form-content">     
+  <form [formGroup]="ionicForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Demand Id</ion-label>
+      <ion-input formControlName="demandID" type="text" clearInput=true min="1" ></ion-input><ion-icon name="add-circle-outline"   (click)="openDemandModal()" slot="end"></ion-icon>
+    </ion-item>
+    <div class="error" *ngIf="isSubmitted && errorControl.demandID.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon>  Demand Id is required.
+    </div>
+   <!--  <app-deal [isMulticheck]="false" (enableButton)="selectDealID($event)"></app-deal> -->
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Opportunity ID   </ion-label>
+      <ion-input formControlName="oppID" type="text" clearInput=true min="1" ></ion-input><ion-icon name="add-circle-outline"    (click)="openDealModal()" slot="end"></ion-icon>
+    </ion-item>
+    
+    <div class="error" *ngIf="isSubmitted && errorControl.oppID.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Opportunity ID is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Skill Element</ion-label>
+      <ion-input formControlName="skillelement" type="text" clearInput=true min="1" ></ion-input>
+      <ion-icon name="add-circle-outline"    (click)="openSkillEmentModal()" slot="end"></ion-icon>
+    </ion-item>
+    <div  class="error" *ngIf="isSubmitted && errorControl.skillelement.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> Skill Element is required.
+    </div >
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Project ID 	</ion-label>
+      <ion-input formControlName="projectID" type="text" ></ion-input>
+      <ion-icon name="add-circle-outline"    (click)="openProjectModal()" slot="end"></ion-icon>
+    </ion-item>
+    <div class="error" *ngIf="isSubmitted && errorControl.projectID.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon>  Project ID  is required.
+    </div>
+    <ion-item lines="full">
+      <ion-label  position="floating" color="primary">Request ID 	</ion-label>
+      <ion-input formControlName="requestID" type="text" ></ion-input>
+      <ion-icon name="add-circle-outline"    (click)="openRequestModal()" slot="end"></ion-icon>
+      
+    </ion-item>
+    <div class="error" *ngIf="isSubmitted && errorControl.requestID.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon>  Request ID is required.
+    </div>
+  <!--   <ion-item lines="full">
+      <ion-label position="floating"color="primary">No.Of Resource </ion-label>
+      <ion-input formControlName="noOfresource" type="text" clearInput=true min="1" ></ion-input>
+    </ion-item>
+    <div class="error" *ngIf="isSubmitted && errorControl.noOfresource.errors?.required">
+      <ion-icon name="information-circle-outline"></ion-icon> No.Of Resource is required.
+    </div>
+    <div class="error" *ngIf="isSubmitted && errorControl.noOfresource.errors?.pattern">
+      <ion-icon name="information-circle-outline"></ion-icon>Only numerical values allowed.
+    </div> -->
     <ion-row>
       <ion-col>
-        ID 
+        <ion-button type="submit" color="danger" expand="block">Submit</ion-button>
       </ion-col>
     </ion-row>
-    </ion-grid>
+  </form>
 </ion-content>
+

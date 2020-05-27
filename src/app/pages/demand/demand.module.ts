@@ -25,6 +25,9 @@ import { StafingSynctDetailsComponent } from './components/staffing-syc/staffing
 import { RenewalstaffingDetailsSyncComponent } from './components/renewalstaffing-details-sync/renewalstaffing-details-sync.component';
 import { RenewalDemandComponent } from './components/renewalstaffing-details-sync/renewal-demand-component';
 import { SearchViewDemandPage } from './view-demand/search-view-demand/search-view-demand.page';
+import { DemandPopupComponent } from './components/demand-popup/demand-popup.component';
+import { DealPopupComponent } from './components/deal-popup/deal-popup.component';
+import { ProjectPopupComponent } from './components/project-popup/project-popup.component';
 @NgModule({
     imports: [
       CommonModule,
@@ -38,7 +41,7 @@ import { SearchViewDemandPage } from './view-demand/search-view-demand/search-vi
          NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage, StaffingSycComponent,
          ManualRequestComponent, ManualRequestDetailsComponent, RightpriceStaffingSyncPage, ForecastDemandSummmaryPage,
          AddButtonComponent, ViewDemandPage, StafingSynctDetailsComponent, RenewalDemandComponent, RenewalstaffingDetailsSyncComponent,
-         SearchViewDemandPage],
+         SearchViewDemandPage, DealPopupComponent, DemandPopupComponent, ProjectPopupComponent],
          schemas: [
           CUSTOM_ELEMENTS_SCHEMA
       ],
