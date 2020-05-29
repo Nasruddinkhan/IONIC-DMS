@@ -1,6 +1,42 @@
 <ion-list>
-    <ion-item button>View</ion-item>
-    <ion-item button>Edit</ion-item>
-    <ion-item button>Cancel</ion-item>
-    <ion-item button>Copy</ion-item>
-  </ion-list>
+  <ion-row>
+    <ion-col>
+      <ion-button
+        type="submit"
+        color="primary"
+        expand="block"
+        (click)="openViewComponentDetails();"
+        >View Demand</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button
+        type="submit"
+        color="success"
+        expand="block"
+        (click)="openEditComponentDetails();"
+        >Edit Demand</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button
+        type="submit"
+        color="warning"
+        expand="block"
+        (click)="openCopyComponentDetails();"
+        >Copy Demand</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button
+        type="submit"
+        color="danger"
+        expand="block"
+        (click)="openCancelComponentDetails();"
+        >Cancel Demand</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-list>

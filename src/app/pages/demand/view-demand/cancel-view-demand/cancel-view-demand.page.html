@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/view-demand"></ion-back-button>
+    </ion-buttons>
+    <ion-title>cancel-view-demand</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-segment [value]="selectedSegment">
+      <ion-segment-button  (click)="segmentChosen('Cancel Demand')" value="Cancel Demand">Cancel Demand</ion-segment-button>
+      <ion-segment-button (click)="segmentChosen('Demands')"  value="Demands">Demands</ion-segment-button> 
+    </ion-segment>
+  </ion-toolbar>
+  <app-cancel-list-demands *ngIf="selectedSegment === 'Demands'"></app-cancel-list-demands>
+  <app-cancel-demands   *ngIf="selectedSegment === 'Cancel Demand'"></app-cancel-demands>
+</ion-content>

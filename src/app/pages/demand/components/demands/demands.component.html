@@ -1,0 +1,18 @@
+<ion-item>
+  <ion-label color="primary">Select Demands ID</ion-label>
+  <ionic-selectable  item-content [(ngModel)]="crmID" [items]="pokemon"
+    itemValueField="pokeIndex"
+    itemTextField="pokeIndex"
+    headerColor="primary"
+    [isMultiple]="isMulticheck"
+    [canSearch]="true"
+    [hasInfiniteScroll]="true"
+    (onInfiniteScroll)="loadDemands($event)"
+    (onSearch)="onDemandSearch($event)"
+    [canClear]="true"
+    [shouldStoreItemValue]="false"
+    closeButtonSlot="end"
+    (onChange)="onDemandChange($event)"
+    searchFailText="Nothing found :(">
+  </ionic-selectable>
+</ion-item> 

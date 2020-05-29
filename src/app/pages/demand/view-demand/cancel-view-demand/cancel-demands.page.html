@@ -1,0 +1,24 @@
+<app-demands *ngIf="isMulticheck === 'true'" [isMulticheck]="isMulticheck"  (enableDemandButton)="selectDemands($event)"></app-demands>
+<ion-item lines="full"  *ngIf="isMulticheck !=='true'">
+  <ion-label  position="floating" color="primary">Demand Id</ion-label>
+  <ion-input  type="text" clearInput=true min="1" ></ion-input>
+</ion-item>
+<ion-item lines="full">
+  <ion-label  position="floating" color="primary">Opp Id</ion-label>
+  <ion-input  type="text" clearInput=true min="1" ></ion-input>
+</ion-item>
+<ion-item lines="full">
+  <ion-label  position="floating" color="primary">Cancel Reason</ion-label>
+  <ion-select>
+    <ion-select-option value="1">Offshore</ion-select-option>
+    <ion-select-option value="2">Onsite</ion-select-option>
+  </ion-select>
+</ion-item>
+<ion-item lines="full">
+  <ion-label position="floating"  color="primary">Comment</ion-label>
+  <ion-textarea></ion-textarea>
+</ion-item>
+<ion-item lines="full">
+  <ion-label  position="floating" color="primary">Employee Id</ion-label>
+  <ion-input  type="text" clearInput=true min="1" ></ion-input>
+</ion-item>

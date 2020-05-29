@@ -30,6 +30,10 @@ import { DealPopupComponent } from './components/deal-popup/deal-popup.component
 import { ProjectPopupComponent } from './components/project-popup/project-popup.component';
 import { ViewDemandListComponent } from './components/view-demand-list/view-demand-list.component';
 import { PopupViewMenuListComponent } from './components/view-demand-list/view-popup-menu-list ';
+import { CancelViewDemandPage } from './view-demand/cancel-view-demand/cancel-view-demand.page';
+import { DemandsComponent } from './components/demands/demands.component';
+import { CancelDemandsListPage } from './view-demand/cancel-view-demand/cancel-demands-list.page';
+import { CancelDemandsPage } from './view-demand/cancel-view-demand/cancel-demands.page';
 @NgModule({
     imports: [
       CommonModule,
@@ -39,12 +43,20 @@ import { PopupViewMenuListComponent } from './components/view-demand-list/view-p
       IonicSelectableModule,
       ReactiveFormsModule
     ],
-    declarations: [ForecastDemandPage, ManualDemandPage, ForecastComponent, CreateForecastDemandPage, CreateManualDemandPage,
-         NewstaffingSyncPage, ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage, StaffingSycComponent,
+    declarations: [ForecastDemandPage,
+                   ManualDemandPage,
+                   ForecastComponent,
+                   CreateForecastDemandPage,
+                   CreateManualDemandPage,
+                   NewstaffingSyncPage,
+                   CancelViewDemandPage,
+                   CancelDemandsListPage,
+                   CancelDemandsPage,
+         ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage, StaffingSycComponent,
          ManualRequestComponent, ManualRequestDetailsComponent, RightpriceStaffingSyncPage, ForecastDemandSummmaryPage,
          AddButtonComponent, ViewDemandPage, StafingSynctDetailsComponent, RenewalDemandComponent, RenewalstaffingDetailsSyncComponent,
          SearchViewDemandPage, DealPopupComponent, DemandPopupComponent,ViewDemandListComponent,
-         PopupViewMenuListComponent, ProjectPopupComponent],
+         PopupViewMenuListComponent, CancelViewDemandPage, ProjectPopupComponent, DemandsComponent],
          schemas: [
           CUSTOM_ELEMENTS_SCHEMA
       ],

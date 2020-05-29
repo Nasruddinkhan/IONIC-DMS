@@ -10,6 +10,7 @@ import { CreateForecastDemandPage } from './forecast-demand/create-forecast-dema
 import { ManualRequestComponent } from './components/manual-request/manual-request.component';
 import { StaffingSycComponent } from './components/staffing-syc/staffing-syc.component';
 import { RenewalstaffingDetailsSyncComponent } from './components/renewalstaffing-details-sync/renewalstaffing-details-sync.component';
+import { CancelViewDemandPage } from './view-demand/cancel-view-demand/cancel-view-demand.page';
 const routes: Routes = [
   {
     path: 'forecast-demand',
@@ -50,7 +51,12 @@ const routes: Routes = [
   {
     path: 'renewalstaffing-sync/:demandID',
     component: RenewalstaffingDetailsSyncComponent
+  },
+  {
+    path: 'cancel-view-demand/:demandID/:isMulticheck',
+    component: CancelViewDemandPage
   }
+
 ];
 
 @NgModule({
