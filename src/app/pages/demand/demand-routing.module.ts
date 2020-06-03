@@ -11,6 +11,8 @@ import { ManualRequestComponent } from './components/manual-request/manual-reque
 import { StaffingSycComponent } from './components/staffing-syc/staffing-syc.component';
 import { RenewalstaffingDetailsSyncComponent } from './components/renewalstaffing-details-sync/renewalstaffing-details-sync.component';
 import { CancelViewDemandPage } from './view-demand/cancel-view-demand/cancel-view-demand.page';
+import { CopyViewDemandPage } from './view-demand/copy-view-demand/copy-view-demand.page';
+import { DemandDetailPage } from './view-demand/demand-detail/demand-detail.page';
 const routes: Routes = [
   {
     path: 'forecast-demand',
@@ -55,7 +57,17 @@ const routes: Routes = [
   {
     path: 'cancel-view-demand/:demandID/:isMulticheck',
     component: CancelViewDemandPage
+  },
+  {
+    path: 'copy-view-demand/:demandID',
+    component: CopyViewDemandPage
+  },
+  {
+    path: 'demand-detail/:demandID',
+    component: DemandDetailPage
   }
+
+
 
 ];
 

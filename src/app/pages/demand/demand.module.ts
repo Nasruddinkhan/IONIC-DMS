@@ -34,6 +34,9 @@ import { CancelViewDemandPage } from './view-demand/cancel-view-demand/cancel-vi
 import { DemandsComponent } from './components/demands/demands.component';
 import { CancelDemandsListPage } from './view-demand/cancel-view-demand/cancel-demands-list.page';
 import { CancelDemandsPage } from './view-demand/cancel-view-demand/cancel-demands.page';
+import { CancelViewDemandComponent } from './components/view-demand-list/cancel-view-demand-list.component';
+import { CopyViewDemandPage } from './view-demand/copy-view-demand/copy-view-demand.page';
+import { DemandDetailPage } from './view-demand/demand-detail/demand-detail.page';
 @NgModule({
     imports: [
       CommonModule,
@@ -52,10 +55,12 @@ import { CancelDemandsPage } from './view-demand/cancel-view-demand/cancel-deman
                    CancelViewDemandPage,
                    CancelDemandsListPage,
                    CancelDemandsPage,
+                   CancelViewDemandComponent,
+                   DemandDetailPage,
          ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage, StaffingSycComponent,
          ManualRequestComponent, ManualRequestDetailsComponent, RightpriceStaffingSyncPage, ForecastDemandSummmaryPage,
          AddButtonComponent, ViewDemandPage, StafingSynctDetailsComponent, RenewalDemandComponent, RenewalstaffingDetailsSyncComponent,
-         SearchViewDemandPage, DealPopupComponent, DemandPopupComponent,ViewDemandListComponent,
+         SearchViewDemandPage, DealPopupComponent, DemandPopupComponent,ViewDemandListComponent, CopyViewDemandPage,
          PopupViewMenuListComponent, CancelViewDemandPage, ProjectPopupComponent, DemandsComponent],
          schemas: [
           CUSTOM_ELEMENTS_SCHEMA

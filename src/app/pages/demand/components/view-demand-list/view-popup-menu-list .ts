@@ -17,6 +17,7 @@ export class PopupViewMenuListComponent implements OnInit {
     }
     openViewComponentDetails(){
      console.log('open view component');
+     this.presentViewDemandAlert();
     }
     openEditComponentDetails(){
       console.log('open edit component');
@@ -27,6 +28,7 @@ export class PopupViewMenuListComponent implements OnInit {
      }
      openCopyComponentDetails(){
       console.log('open copy component');
+      this.presentCopyAlert();
      }
 
      async presentAlert() {
@@ -50,6 +52,56 @@ export class PopupViewMenuListComponent implements OnInit {
             const demandID = 5000;
             const isChk = false;
             this.router.navigate([`/demand/cancel-view-demand/${demandID}/${isChk}`]);
+            }
+        }
+      ]
+      }).then(alertEl => {
+        alertEl.present();
+      });
+    };
+
+    async presentCopyAlert() {
+      this.alertCtrl.create({
+        header: 'Are you sure ?',
+        message: 'You want to copy demand',
+        buttons: [
+          {
+            text: 'Yes',
+            handler: () => {
+            console.log('are  Yes');
+            const demandID = 5000;
+            this.router.navigate([`/demand/copy-view-demand/${demandID}`]);
+            }
+        },
+        {
+          text: 'No',
+          handler: () => {
+            console.log('are  No');
+            }
+        }
+      ]
+      }).then(alertEl => {
+        alertEl.present();
+      });
+    };
+
+    async presentViewDemandAlert() {
+      this.alertCtrl.create({
+        header: 'Are you sure ?',
+        message: 'You want to view demands',
+        buttons: [
+          {
+            text: 'Yes',
+            handler: () => {
+            console.log('are  Yes');
+            const demandID = 5000;
+            this.router.navigate([`/demand/demand-detail/${demandID}`]);
+            }
+        },
+        {
+          text: 'No',
+          handler: () => {
+            console.log('are  No');
             }
         }
       ]
