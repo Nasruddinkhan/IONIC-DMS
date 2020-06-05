@@ -20,6 +20,7 @@ export class PopupViewMenuListComponent implements OnInit {
      this.presentViewDemandAlert();
     }
     openEditComponentDetails(){
+      this.presentEditAlert();
       console.log('open edit component');
      }
      openCancelComponentDetails(){
@@ -96,6 +97,31 @@ export class PopupViewMenuListComponent implements OnInit {
             console.log('are  Yes');
             const demandID = 5000;
             this.router.navigate([`/demand/demand-detail/${demandID}`]);
+            }
+        },
+        {
+          text: 'No',
+          handler: () => {
+            console.log('are  No');
+            }
+        }
+      ]
+      }).then(alertEl => {
+        alertEl.present();
+      });
+    };
+
+    presentEditAlert(){
+      this.alertCtrl.create({
+        header: 'Are you sure ?',
+        message: 'You want to edit demands',
+        buttons: [
+          {
+            text: 'Yes',
+            handler: () => {
+            console.log('are  Yes');
+            const demandID = 5000;
+            this.router.navigate([`/demand/edit-view-demand/${demandID}`]);
             }
         },
         {

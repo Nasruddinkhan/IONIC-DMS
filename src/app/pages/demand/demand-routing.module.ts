@@ -13,6 +13,7 @@ import { RenewalstaffingDetailsSyncComponent } from './components/renewalstaffin
 import { CancelViewDemandPage } from './view-demand/cancel-view-demand/cancel-view-demand.page';
 import { CopyViewDemandPage } from './view-demand/copy-view-demand/copy-view-demand.page';
 import { DemandDetailPage } from './view-demand/demand-detail/demand-detail.page';
+import { EditViewDemandPage } from './view-demand/edit-view-demand/edit-view-demand.page';
 const routes: Routes = [
   {
     path: 'forecast-demand',
@@ -65,10 +66,11 @@ const routes: Routes = [
   {
     path: 'demand-detail/:demandID',
     component: DemandDetailPage
+  },
+  {
+    path: 'edit-view-demand/:demandID',
+    component: EditViewDemandPage
   }
-
-
-
 ];
 
 @NgModule({

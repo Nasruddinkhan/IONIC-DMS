@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Employee } from '../../model/manual.request.model';
+import { ManualRequestService } from '../../../../service/manual-request/manual-request.service';
 
 @Component({
   selector: 'app-demand-detail',
@@ -7,8 +9,9 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./demand-detail.page.scss'],
 })
 export class DemandDetailPage implements OnInit {
-
-  constructor(private activeRoute: ActivatedRoute) { }
+  employees: Employee[];
+  constructor(private activeRoute: ActivatedRoute,
+              private manaulService: ManualRequestService) { }
 
   ngOnInit() {
     console.log(`dismiss controller`);
@@ -20,6 +23,6 @@ export class DemandDetailPage implements OnInit {
       console.log('demandID', demandID);
       // this.popoverCtrl.dismiss();
      });
+     this.employees = this.manaulService.getAllManualRequest();
   }
-
 }

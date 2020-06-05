@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar  color="primary">
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/view-demand"></ion-back-button>
     </ion-buttons>
@@ -8,4 +8,13 @@
 </ion-header>
 <ion-content>
   <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
+  <ion-item  *ngFor="let emp of employees">
+    <ion-avatar>
+      <img [src]="emp.imageUrl" style="background: #f2f2f2">
+    </ion-avatar>
+    <ion-label class="ion-text-capitalize">
+      <h2>{{emp.firstName}}</h2>
+      <p>#{{emp.lastName}} - {{emp.lastName}}  - {{emp.lastName}}  - {{emp.lastName}}  - {{emp.lastName}}</p>
+    </ion-label>
+  </ion-item>
 </ion-content>

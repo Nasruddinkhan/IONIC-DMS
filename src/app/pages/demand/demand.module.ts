@@ -37,6 +37,7 @@ import { CancelDemandsPage } from './view-demand/cancel-view-demand/cancel-deman
 import { CancelViewDemandComponent } from './components/view-demand-list/cancel-view-demand-list.component';
 import { CopyViewDemandPage } from './view-demand/copy-view-demand/copy-view-demand.page';
 import { DemandDetailPage } from './view-demand/demand-detail/demand-detail.page';
+import { EditViewDemandPage } from './view-demand/edit-view-demand/edit-view-demand.page';
 @NgModule({
     imports: [
       CommonModule,
@@ -57,6 +58,7 @@ import { DemandDetailPage } from './view-demand/demand-detail/demand-detail.page
                    CancelDemandsPage,
                    CancelViewDemandComponent,
                    DemandDetailPage,
+                   EditViewDemandPage,
          ForecastDetailsPage, RenewalstaffingSyncPage, DealComponent, ManualRequestPage, StaffingSycComponent,
          ManualRequestComponent, ManualRequestDetailsComponent, RightpriceStaffingSyncPage, ForecastDemandSummmaryPage,
          AddButtonComponent, ViewDemandPage, StafingSynctDetailsComponent, RenewalDemandComponent, RenewalstaffingDetailsSyncComponent,
