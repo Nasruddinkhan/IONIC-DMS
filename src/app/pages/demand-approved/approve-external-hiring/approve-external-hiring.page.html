@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -7,6 +7,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-
+<ion-content class="card-background-page">
+  <ion-card (click)="externalHiring('pen-ext-demands');">
+    <img src="assets/img/Pen.jpg"/>
+    <div class="card-title">Pending for approval</div>
+    <div class="card-subtitle">52 Demands</div>
+  </ion-card>
+ 
+  <ion-card  (click)="externalHiring('app-ext-demands');">
+    <img src="assets/img/apr.jfif"/>
+    <div class="card-title">Approved</div>
+    <div class="card-subtitle">52 Demands</div>
+  </ion-card>
+  <ion-card style="background: black;"  (click)="externalHiring('rej-ext-demands');">
+    <img src="assets/img/reject.jfif"/>
+    <div class="card-title">Reject</div>
+    <div class="card-subtitle">52 Demands</div>
+  </ion-card>
 </ion-content>

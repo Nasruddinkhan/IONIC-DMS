@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-approve-external-hiring',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApproveExternalHiringPage implements OnInit {
 
-  constructor() { }
+  constructor(private  router: Router) { }
 
   ngOnInit() {
   }
-
+  externalHiring(pages){
+    console.log('calling');
+    this.router.navigate([`/demandapproval/${pages}`]);
+  }
 }

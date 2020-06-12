@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar  color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pen-ext-demands"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">Pending Demands</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar>
+    <ion-segment [value]="selectedSegment">
+      <ion-segment-button  (click)="segmentChosen('Hirecraft')" value="Hirecraft">Hirecraft</ion-segment-button>
+      <ion-segment-button (click)="segmentChosen('SkillBay')" value="SkillBay">SkillBay</ion-segment-button> 
+    </ion-segment>
+  </ion-toolbar>
+  <pen-skillbay-demand-page  *ngIf="selectedSegment === 'SkillBay'"></pen-skillbay-demand-page>
+  <pen-hirecraft-demand-page *ngIf="selectedSegment === 'Hirecraft'"></pen-hirecraft-demand-page>
+</ion-content>
