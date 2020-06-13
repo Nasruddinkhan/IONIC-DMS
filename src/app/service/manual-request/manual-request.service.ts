@@ -20,8 +20,224 @@ export class ManualRequestService {
       lastName: 'khan',
       imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
       eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
+    },
+    {
+      empID: 'JK5050747',
+      firstName: 'Jalaluddin khan',
+      lastName: 'khan',
+      imageUrl:  'https://upload.wikimedia.org/wikipedia/commons/c/cc/Ad-tech_London_2010_%282%29.JPG',
+      eatMeal: ['Indian', 'Salad']
     }
-
   ];
   constructor() { }
   getAllManualRequest() {

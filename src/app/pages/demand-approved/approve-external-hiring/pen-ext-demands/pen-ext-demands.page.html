@@ -10,8 +10,8 @@
 <ion-content>
   <ion-toolbar>
     <ion-segment [value]="selectedSegment">
-      <ion-segment-button  (click)="segmentChosen('Hirecraft')" value="Hirecraft">Hirecraft</ion-segment-button>
-      <ion-segment-button (click)="segmentChosen('SkillBay')" value="SkillBay">SkillBay</ion-segment-button> 
+      <ion-segment-button [disabled]="selectedSegment === 'Hirecraft'"  (click)="segmentChosen('Hirecraft')" value="Hirecraft">Hirecraft</ion-segment-button>
+      <ion-segment-button [disabled]="selectedSegment === 'SkillBay'"  (click)="segmentChosen('SkillBay')" value="SkillBay">SkillBay</ion-segment-button> 
     </ion-segment>
   </ion-toolbar>
   <pen-skillbay-demand-page  *ngIf="selectedSegment === 'SkillBay'"></pen-skillbay-demand-page>
