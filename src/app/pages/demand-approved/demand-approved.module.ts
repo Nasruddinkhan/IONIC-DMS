@@ -16,6 +16,8 @@ import { ApprovedHCDemandPage } from './approve-external-hiring/app-ext-demands/
 import { ApprovedSBDemandPage } from './approve-external-hiring/app-ext-demands/app-sb-demands.component';
 import { AppExtHiringDetailsComponent } from './component/app-ext-hiring-details/app-ext-hiring-details.component';
 import { PenExtHiringDetailsComponent } from './component/pen-ext-hiring-details/pen-ext-hiring-details.component';
+import { ApprovedManualRequestPage } from './approve-manual-demand/approved-manual-request/approved-manual-request.page';
+import { PenAppManualRequestPage } from './approve-manual-demand/pen-app-manual-request/pen-app-manual-request.page';
 @NgModule({
     imports: [
       CommonModule,
@@ -35,6 +37,8 @@ import { PenExtHiringDetailsComponent } from './component/pen-ext-hiring-details
       ApproveManualDemandPage,
       RejExtDemandsPage,
       AppExtDemandsPage,
+      ApprovedManualRequestPage,
+      PenAppManualRequestPage,
       PenExtHiringDetailsComponent,
       AppExtHiringDetailsComponent],
       schemas: [

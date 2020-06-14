@@ -35,9 +35,6 @@ const routes: Routes = [
     path: 'rej-ext-demands',
     component:RejExtDemandsPage
   }
-
-
-
 ];
 
 @NgModule({

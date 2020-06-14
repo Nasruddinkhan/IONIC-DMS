@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApproveManualDemandPage implements OnInit {
 
-  constructor() { }
-
+  selectedSegment: string ;
+  constructor() {
+    this.selectedSegment = 'Pending Manual Request';
+   }
   ngOnInit() {
   }
-
+  segmentChosen(selectedSegment: string) {
+    console.log(selectedSegment);
+    this.selectedSegment = selectedSegment;
+  }
 }

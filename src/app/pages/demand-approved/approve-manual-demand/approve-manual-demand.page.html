@@ -3,10 +3,17 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>approve-manual-demand</ion-title>
+    <ion-title>{{selectedSegment}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-toolbar>
+    <ion-segment [value]="selectedSegment" color="primary">
+      <ion-segment-button [disabled]="selectedSegment === 'Pending Manual Request'"  (click)="segmentChosen('Pending Manual Request')" value="Pending Manual Request">Pending Manual Request</ion-segment-button>
+      <ion-segment-button [disabled]="selectedSegment === 'Approved Manual Request'"   (click)="segmentChosen('Approved Manual Request')" value="Approved Manual Request">Approved Manual Request</ion-segment-button> 
+    </ion-segment>
+  </ion-toolbar>
+  <app-pen-app-manual-request *ngIf="selectedSegment === 'Pending Manual Request'"></app-pen-app-manual-request>
+  <app-approved-manual-request *ngIf="selectedSegment === 'Approved Manual Request'"></app-approved-manual-request>
 </ion-content>
