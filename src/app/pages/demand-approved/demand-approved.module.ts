@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ApproveExternalHiringPage } from './approve-external-hiring/approve-external-hiring.page';
 import { ApproveManualDemandPage } from './approve-manual-demand/approve-manual-demand.page';
 import { DemandApprovedPageRoutingModule } from './demand-approved-routing.module';
@@ -14,12 +14,15 @@ import { PendingHCDemandPage } from './approve-external-hiring/pen-ext-demands/p
 import { PendingSBDemandPage } from './approve-external-hiring/pen-ext-demands/pen-sb-demands.component'
 import { ApprovedHCDemandPage } from './approve-external-hiring/app-ext-demands/app-hc-demands.component';
 import { ApprovedSBDemandPage } from './approve-external-hiring/app-ext-demands/app-sb-demands.component';
+import { AppExtHiringDetailsComponent } from './component/app-ext-hiring-details/app-ext-hiring-details.component';
+import { PenExtHiringDetailsComponent } from './component/pen-ext-hiring-details/pen-ext-hiring-details.component';
 @NgModule({
     imports: [
       CommonModule,
       FormsModule,
       IonicModule,
-      DemandApprovedPageRoutingModule
+      DemandApprovedPageRoutingModule,
+      ReactiveFormsModule
     ],
     declarations: [ApproveExternalHiringPage,
       RejectHCDemandPage,
@@ -28,6 +31,15 @@ import { ApprovedSBDemandPage } from './approve-external-hiring/app-ext-demands/
       PendingSBDemandPage,
       ApprovedHCDemandPage,
       ApprovedSBDemandPage,
-      PenExtDemandsPage, ApproveManualDemandPage, RejExtDemandsPage, AppExtDemandsPage]
+      PenExtDemandsPage,
+      ApproveManualDemandPage,
+      RejExtDemandsPage,
+      AppExtDemandsPage,
+      PenExtHiringDetailsComponent,
+      AppExtHiringDetailsComponent],
+      schemas: [
+        CUSTOM_ELEMENTS_SCHEMA
+    ],
+
   })
 export class DemandApprovedPageModule {}

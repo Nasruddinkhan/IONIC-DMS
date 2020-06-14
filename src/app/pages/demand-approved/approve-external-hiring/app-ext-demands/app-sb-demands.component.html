@@ -1,23 +1,4 @@
-
 <ion-list>
- 
-    <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
-    <ion-item *ngFor="let renwalDemandObj of employees ">
-        <ion-avatar>
-          <img [src]="renwalDemandObj.imageUrl" style="background: #f2f2f2">
-        </ion-avatar>
-        <ion-label class="ion-text-capitalize">
-          <h2>{{renwalDemandObj.firstName}}</h2>
-          <p>#{{renwalDemandObj.lastName}}</p>
-        </ion-label>
-        <ion-buttons slot="end">
-            <ion-button>
-             <!--  <ion-router-link color="primary" [routerLink]="['./',renwalDemandObj.empID]"> -->
-                 <ion-icon name="arrow-forward-outline" ></ion-icon>
-               <!--  </ion-router-link> -->
-            </ion-button>
-          </ion-buttons> 
-      </ion-item>  
-     
-        
+    <ion-searchbar placeholder="Search Demand"></ion-searchbar>
+    <app-app-ext-hiring-details *ngFor="let emp of employees" [employeesObj]="emp"></app-app-ext-hiring-details>
 </ion-list>

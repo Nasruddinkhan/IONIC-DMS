@@ -1,0 +1,16 @@
+<ion-item>
+  <ion-avatar>
+    <img [src]="employeesObj.imageUrl" style="background: #f2f2f2">
+  </ion-avatar>
+  <ion-label class="ion-text-capitalize">
+    <h2>{{employeesObj.firstName}}</h2>
+    <p>#{{employeesObj.lastName}}</p>
+  </ion-label>
+  <ion-buttons slot="end">
+      <ion-button>
+       <!--  <ion-router-link color="primary" [routerLink]="['./',renwalDemandObj.empID]"> -->
+           <ion-icon name="arrow-forward-outline" ></ion-icon>
+         <!--  </ion-router-link> -->
+      </ion-button>
+    </ion-buttons> 
+</ion-item>  
