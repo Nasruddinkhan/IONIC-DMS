@@ -1,1 +1,13 @@
-<p>Pending Manual Request</p>
+
+ <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add" (click)="aprovedManualRequest()"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button color="danger">
+      <ion-icon name="close-circle"  (click)="aprovedManualRequest()"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+<ion-list>
+    <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
+    <app-pen-ext-hiring-details *ngFor="let emp of employees" [employeesObj]="emp" (returnObj)="onChange($event)"></app-pen-ext-hiring-details>
+</ion-list>

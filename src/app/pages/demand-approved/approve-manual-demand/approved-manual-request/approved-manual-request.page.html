@@ -1,1 +1,4 @@
-<p>Approved Manual Request</p>
+<ion-list>
+    <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
+    <app-pen-ext-hiring-details *ngFor="let emp of employees" [employeesObj]="emp" ></app-pen-ext-hiring-details>
+</ion-list>

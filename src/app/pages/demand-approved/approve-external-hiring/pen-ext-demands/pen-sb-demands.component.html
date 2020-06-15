@@ -1,11 +1,12 @@
-
+<ion-fab vertical="top" horizontal="end" slot="fixed">
+  <ion-fab-button (click)="approvedSBDetails()">
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-button (click)="approvedSBDetails()" color="danger">
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
 <ion-list>
- 
-    <ion-fab vertical="top" horizontal="end" slot="fixed">
-        <ion-fab-button (click)="approvedSBDetails()">
-          <ion-icon name="add"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
     <ion-searchbar placeholder="Search Demand" ></ion-searchbar>
     <app-pen-ext-hiring-details *ngFor="let emp of employees" [employeesObj]="emp"  (returnObj)="onChange($event)"></app-pen-ext-hiring-details>
 </ion-list>
